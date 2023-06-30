@@ -1,11 +1,12 @@
-nginx-vod:
-  build: .
-  # image: alfg/nginx-vod-module
-  ports:
-    - 8080:80
-  environment:
-    - PORT=80
-    - AWS_ACCESS_KEY=
-    - AWS_SIGNING_KEY=
-    - AWS_KEY_SCOPE=
-    - AWS_S3_BUCKET=
+services:
+  nginx-vod:
+    build: .
+    # image: alfg/nginx-vod-module
+    ports:
+      - 8080:80
+    environment:
+      - PORT=80
+      - AWS_ACCESS_KEY=AKIAVRVR6VH5QP5OAPY7
+      - AWS_SIGNING_KEY=RkLRMr2c6w+VtcB3HICODOrj+eQDSD3MhqI0m7xE6zM=
+      - AWS_KEY_SCOPE=20230630/us-east-1/s3/aws4_request
+      - AWS_S3_BUCKET=invintus-client-media
